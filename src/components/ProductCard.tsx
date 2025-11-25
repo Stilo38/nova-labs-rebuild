@@ -35,7 +35,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="group">
       <Link to={`/product/${node.handle}`}>
-        <div className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <div className="bg-card/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-sm hover:shadow-glow-medium transition-all border border-accent/5 hover:border-accent/20">
           <div className="aspect-square bg-muted relative overflow-hidden">
             {node.images.edges[0]?.node ? (
               <img
@@ -60,7 +60,8 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </Link>
       <Button 
         onClick={handleAddToCart}
-        className="w-full mt-2 bg-accent hover:bg-accent/90 text-accent-foreground"
+        variant="gradient"
+        className="w-full mt-2"
         disabled={!node.variants.edges[0]?.node.availableForSale}
       >
         {node.variants.edges[0]?.node.availableForSale ? "Add to Cart" : "Out of Stock"}

@@ -17,10 +17,13 @@ export const NewsletterSection = () => {
   };
 
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-2xl mx-auto">
-        <div className="bg-card rounded-3xl p-8 md:p-12 text-center shadow-lg">
-          <div className="w-16 h-16 mx-auto mb-6 text-accent">
+    <section className="py-20 px-4 relative overflow-hidden">
+      {/* Background gradient element */}
+      <div className="absolute inset-0 bg-gradient-subtle opacity-20 pointer-events-none" />
+      
+      <div className="max-w-2xl mx-auto relative z-10">
+        <div className="bg-card/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-center shadow-glow-medium border border-accent/10">
+          <div className="w-16 h-16 mx-auto mb-6 text-accent drop-shadow-[0_0_15px_rgba(142,215,218,0.3)]">
             <svg viewBox="0 0 100 100" fill="currentColor">
               <path d="M50,10 L70,30 L90,20 L80,40 L100,50 L80,60 L90,80 L70,70 L50,90 L30,70 L10,80 L20,60 L0,50 L20,40 L10,20 L30,30 Z" />
             </svg>
@@ -39,7 +42,7 @@ export const NewsletterSection = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="bg-background"
+              className="bg-background border-accent/20 focus:border-accent"
             />
             <Input
               type="tel"
@@ -47,12 +50,13 @@ export const NewsletterSection = () => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
-              className="bg-background"
+              className="bg-background border-accent/20 focus:border-accent"
             />
             <Button 
               type="submit"
+              variant="gradient"
               size="lg"
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-full"
+              className="w-full rounded-full"
             >
               SIGN ME UP!
             </Button>

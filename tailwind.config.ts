@@ -38,6 +38,8 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          light: "hsl(var(--accent-light))",
+          glow: "hsl(var(--accent-glow))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -57,6 +59,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-subtle": "var(--gradient-subtle)",
+        "gradient-radial": "var(--gradient-radial)",
+      },
+      boxShadow: {
+        "glow-soft": "var(--glow-soft)",
+        "glow-medium": "var(--glow-medium)",
+        "glow-strong": "var(--glow-strong)",
       },
       borderRadius: {
         lg: "var(--radius)",
