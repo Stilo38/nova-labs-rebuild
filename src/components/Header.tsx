@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl">
-      <div className="border border-border/20 rounded-full px-6 py-3 flex items-center justify-between shadow-lg" style={{ background: 'rgba(255, 255, 255, 0.85)', backdropFilter: 'saturate(180%) blur(20px)' }}>
+      <div className="backdrop-blur-md bg-[var(--header-blur)] border border-border/20 rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
