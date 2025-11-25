@@ -16,9 +16,9 @@ export const HeroSection = () => {
         </h1>
 
         <Link to="/shop">
-          <Button variant="gradient" size="lg" className="rounded-full px-8 py-6 text-lg mt-8 group">
-            Explore All Products
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          <Button variant="hero" size="lg" className="rounded-full px-8 py-6 text-lg mt-8 group">
+            <span className="relative z-10 transition-colors duration-300">Explore All Products</span>
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </Link>
       </div>
