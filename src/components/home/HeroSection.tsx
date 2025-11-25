@@ -1,17 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export const HeroSection = () => {
-  return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-32 pb-20 relative overflow-hidden">
+  return <section className="min-h-screen flex items-center justify-center px-4 pt-32 pb-20 relative overflow-hidden">
       {/* Subtle gradient background */}
       <div className="absolute inset-0 bg-gradient-subtle opacity-30 pointer-events-none" />
       
       <div className="max-w-6xl mx-auto text-center relative z-10">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-          Rule Your NovaLabs
-          <br />
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">The Future of Research
+With Modern Peptides<br />
           <span className="italic text-accent drop-shadow-[0_0_15px_rgba(142,215,218,0.3)]">With Modern Peptides</span>
         </h1>
 
@@ -22,6 +19,5 @@ export const HeroSection = () => {
           </Button>
         </Link>
       </div>
-    </section>
-  );
+    </section>;
 };
