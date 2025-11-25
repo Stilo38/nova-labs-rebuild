@@ -16,9 +16,11 @@ export const HeroSection = () => {
         </h1>
 
         <Link to="/shop">
-          <Button variant="hero" size="lg" className="rounded-full pl-8 pr-6 py-6 text-lg mt-8 group">
-            <span className="relative z-10 transition-colors duration-300">Explore All Products</span>
-            <ArrowRight className="ml-3 h-5 w-5 relative z-10 transition-colors duration-300" />
+          <Button variant="hero" size="lg" className="rounded-full pl-8 pr-3 py-3 text-lg mt-8 group">
+            <span className="relative z-10 transition-colors duration-300 mr-2">Explore All Products</span>
+            <span className="relative z-10 bg-black rounded-full p-3 group-hover:bg-white transition-colors duration-300">
+              <ArrowRight className="h-5 w-5 text-white group-hover:text-black transition-colors duration-300" />
+            </span>
           </Button>
         </Link>
       </div>
