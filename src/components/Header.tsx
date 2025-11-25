@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Menu, ShoppingBag, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Link } from "react-router-dom";
-import { CartDrawer } from "./CartDrawer";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +52,7 @@ export const Header = () => {
 
         {/* Right Side */}
         <div className="flex items-center gap-3">
-          <nav className="hidden md:flex items-center gap-6 mr-3">
+          <nav className="hidden md:flex items-center gap-6">
             <Link to="/lab-results" className="text-sm hover:text-accent transition-colors">
               Lab Results
             </Link>
@@ -61,7 +60,6 @@ export const Header = () => {
               Contact
             </Link>
           </nav>
-          <CartDrawer />
         </div>
       </div>
     </header>
