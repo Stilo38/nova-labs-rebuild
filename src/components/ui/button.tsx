@@ -17,7 +17,6 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         gradient: "bg-gradient-primary text-accent-foreground shadow-glow-soft hover:shadow-glow-medium relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity",
         pill: "border-[1.5px] border-accent/60 bg-background/60 backdrop-blur-sm text-foreground hover:bg-accent/10 shadow-glow-soft hover:shadow-glow-medium rounded-full px-6 transition-all",
-        hero: "relative overflow-hidden bg-white text-black shadow-glow-soft hover:shadow-none [&_svg]:relative [&_svg]:z-10 [&_svg]:transition-colors [&_svg]:duration-300 before:absolute before:inset-0 before:bg-black before:scale-x-0 before:origin-right hover:before:scale-x-100 before:transition-transform before:duration-300 before:ease-out hover:text-white",
       },
       size: {
         default: "h-10 px-4 py-2",
