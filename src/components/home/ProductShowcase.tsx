@@ -1,14 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
-import { fetchProducts } from "@/lib/shopify";
 import { ProductCard } from "@/components/ProductCard";
-import { Skeleton } from "@/components/ui/skeleton";
+import { mockProducts } from "@/lib/mockProducts";
 
 export const ProductShowcase = () => {
-  const { data: products, isLoading } = useQuery({
-    queryKey: ['products'],
-    queryFn: () => fetchProducts(10),
-  });
-
   return (
     <section className="py-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -16,26 +9,11 @@ export const ProductShowcase = () => {
           Everyday Routine <span className="italic text-accent">Heroes</span>
         </h2>
 
-        {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {[1, 2, 3].map((i) => (
-              <Skeleton key={i} className="h-[400px] rounded-2xl" />
-            ))}
-          </div>
-        ) : products && products.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {products.map((product) => (
-              <ProductCard key={product.node.id} product={product} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground mb-4">No products found</p>
-            <p className="text-sm text-muted-foreground">
-              Create your first product to see it displayed here
-            </p>
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+          {mockProducts.slice(0, 3).map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </section>
   );
